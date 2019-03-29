@@ -10,16 +10,10 @@ class grep(line: String){
     private val indexOfWord = lineSplit.lastIndex - 1
     private val indexOfFile = lineSplit.lastIndex
     private val word = lineSplit[indexOfWord]
-    private val file = lineSplit[indexOfFile]
-
-    private fun flugs(){
-        if (lineSplit.contains("-i")) i = true
-        if (lineSplit.contains("-v")) v = true
-        if (lineSplit.contains("-r")) r = true
-    }
+    private val inputFile = lineSplit[indexOfFile]
 
     private fun wordGrep(lines: List<String>): List<String> {
-        val res = listOf<String>()
+        val res = mutableListOf<String>()
         for (line in lines) {
             var newWord = word
             var newLine = line
@@ -28,14 +22,14 @@ class grep(line: String){
                 newLine = line.toLowerCase()
             }
             if (!v) {
-                if (newLine.contains(newWord)) res.plus(line)
-            } else if (!newLine.contains(newWord)) res.plus(line)
+                if (newLine.contains(newWord)) res.add(line)
+            } else if (!newLine.contains(newWord)) res.add(line)
         }
         return res
     }
 
     private fun regexGrep(lines: List<String>): List<String> {
-        val res = listOf<String>()
+        val res = mutableListOf<String>()
         for (line in lines) {
             var newWord = word
             var newLine = line
@@ -44,15 +38,17 @@ class grep(line: String){
                 newLine = line.toLowerCase()
             }
             if (!v) {
-                if (Regex(newWord).matches(newLine.split(" ")[indexOfWord])) res.plus(line)
-            } else if (!Regex(newWord).matches(newLine.split(" ")[indexOfWord])) res.plus(line)
+                if (newLine.contains(Regex(newWord))) res.add(line)
+            } else if (!Regex(newWord).matches(newLine.split(" ")[indexOfWord])) res.add(line)
         }
         return res
     }
 
     fun grepGrep(): List<String> {
-        flugs()
-        val lines = File(file).readLines()
+        if (lineSplit.contains("-i")) i = true
+        if (lineSplit.contains("-v")) v = true
+        if (lineSplit.contains("-r")) r = true
+        val lines = File(inputFile).readLines()
         return if (r) regexGrep(lines) else wordGrep(lines)
     }
 
