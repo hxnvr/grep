@@ -1,12 +1,6 @@
 package grep
+import com.xenomachina.argparser.ArgParser
 
-fun main(line: Array<String>) {
-    println("Введите запрос в формате 'grep [-i][-r][-v] слово файл' ")
-    val inputLine = readLine()!!.toString()
-    val testGrep = Grep(inputLine)
-    val strings = testGrep.findStrings()
-    println("Строки :")
-    for (string in strings){
-        println(string)
-    }
+fun main(args: Array<String>) {
+    ArgParser(args).parseInto(::Grep).findStrings()
 }

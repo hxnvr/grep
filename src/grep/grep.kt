@@ -1,29 +1,20 @@
 package grep
-
 import java.io.File
+import com.xenomachina.argparser.ArgParser
 
-class Grep(line: String) {
-    var v = false // инвертирует условие фильтрации
-    var i = false // игнорировать регистр слов
-    var r = false // вместо слова задаёт регулярное выражение для поиска
-    private val lineSplit = line.split(" ")
-    private val indexOfWord = lineSplit.lastIndex - 1
-    private val indexOfFile = lineSplit.lastIndex
-    private val inputWord = lineSplit[indexOfWord]
-    private val inputFile = lineSplit[indexOfFile]
+//data model
+class Grep(parser: ArgParser) {
+    private val v by parser.flagging("-v", help = "флаг инверсии")
+    private val i by parser.flagging("-i", help = "флаг игнорирования регистра слов")
+    private val r by parser.flagging("-r", help = "флаг регулярного выражения")
+    private val word by parser.positional("слово, по которому нужно искать")
+    private val file by parser.positional( "файл для поиска")
 
-    fun findStrings(): List<String> {
-        if (lineSplit.contains("-i")) i = true
-        if (lineSplit.contains("-v")) v = true
-        if (lineSplit.contains("-r")) r = true
-        val lines = File(inputFile).readLines()
-        return wordGrep(lines)
-    }
-
-    private fun wordGrep(lines: List<String>): List<String> {
+    fun findStrings() {
+        val lines = File(file).readLines()
         val result = mutableListOf<String>()
         for (line in lines) {
-            var newWord = inputWord
+            var newWord = word
             var newLine = line
             if (i) {
                 newWord = newWord.toLowerCase()
@@ -39,9 +30,8 @@ class Grep(line: String) {
                 } else if (!newLine.contains(Regex(newWord))) result.add(line)
             }
         }
-        return result
+       for (i in result){
+           println(i)
+       }
     }
-
-
-
 }
