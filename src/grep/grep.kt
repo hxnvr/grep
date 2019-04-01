@@ -10,7 +10,7 @@ class Grep(parser: ArgParser) {
     private val word by parser.positional("слово, по которому нужно искать")
     private val file by parser.positional( "файл для поиска")
 
-    fun findStrings() {
+    private fun findStrings(): List<String> {
         val lines = File(file).readLines()
         val result = mutableListOf<String>()
         for (line in lines) {
@@ -30,8 +30,13 @@ class Grep(parser: ArgParser) {
                 } else if (!newLine.contains(Regex(newWord))) result.add(line)
             }
         }
-       for (i in result){
-           println(i)
-       }
+        return result
+    }
+
+    fun write() {
+        val list = findStrings()
+        for (line in list){
+            println(line)
+        }
     }
 }
