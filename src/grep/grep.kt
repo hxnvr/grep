@@ -35,6 +35,7 @@ class Grep(parser: ArgParser) {
 
     fun write() {
         val list = findStrings()
+        println("Cтроки :")
         for (line in list){
             println(line)
         }
