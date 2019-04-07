@@ -11,4 +11,4 @@ class Testtest {
         assertEquals(listOf("748jhh"), main2(arrayOf("-r", "\\d", "input/test.txt")))
     }
 
-}
+}  
