@@ -2,7 +2,6 @@ package grep
 import java.io.File
 import com.xenomachina.argparser.ArgParser
 
-//data model
 class Grep(parser: ArgParser) {
     private val v by parser.flagging("-v", help = "флаг инверсии")
     private val i by parser.flagging("-i", help = "флаг игнорирования регистра слов")
@@ -10,7 +9,7 @@ class Grep(parser: ArgParser) {
     private val word by parser.positional("слово, по которому нужно искать")
     private val file by parser.positional( "файл для поиска")
 
-    private fun findStrings(): List<String> {
+    fun findStrings(): List<String> {
         val lines = File(file).readLines()
         val result = mutableListOf<String>()
         for (line in lines) {
