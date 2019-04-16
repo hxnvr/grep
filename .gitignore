@@ -12,7 +12,6 @@
 .mtj.tmp/
 
 # Package Files #
-*.jar
 *.war
 *.nar
 *.ear
@@ -32,4 +31,4 @@ hs_err_pid*
 .idea/workspace.xml
 grep.iml
 out/production/
-/.idea/libraries/KotlinJavaRuntime.xml
+
