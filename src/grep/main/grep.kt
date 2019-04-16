@@ -1,4 +1,4 @@
-package grep
+package grep.main
 import java.io.File
 import com.xenomachina.argparser.ArgParser
 
@@ -11,6 +11,7 @@ class Grep(parser: ArgParser) {
 
     fun findStrings(): List<String> {
         val lines = File(file).readLines()
+        if (lines.isEmpty()) throw IllegalArgumentException()
         val result = mutableListOf<String>()
         for (line in lines) {
             var newWord = word
