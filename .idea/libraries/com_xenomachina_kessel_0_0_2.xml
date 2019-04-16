@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="com.xenomachina:kessel:0.0.2" type="repository">
+    <properties maven-id="com.xenomachina:kessel:0.0.2" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/xenomachina/kessel/0.0.2/kessel-0.0.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/io/arrow-kt/arrow-core/0.7.1/arrow-core-0.7.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.2.31/kotlin-stdlib-jdk7-1.2.31.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/io/arrow-kt/arrow-annotations/0.7.1/arrow-annotations-0.7.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/io/kindedj/kindedj/1.1.0/kindedj-1.1.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/io/arrow-kt/arrow-data/0.7.1/arrow-data-0.7.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/io/arrow-kt/arrow-typeclasses/0.7.1/arrow-typeclasses-0.7.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/jetbrains/kotlin/kotlin-stdlib/1.2.41/kotlin-stdlib-1.2.41.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/jetbrains/annotations/13.0/annotations-13.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

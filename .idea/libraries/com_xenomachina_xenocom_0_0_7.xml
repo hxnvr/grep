@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="com.xenomachina:xenocom:0.0.7" type="repository">
+    <properties maven-id="com.xenomachina:xenocom:0.0.7" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/xenomachina/xenocom/0.0.7/xenocom-0.0.7.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/jetbrains/kotlin/kotlin-stdlib/1.2.31/kotlin-stdlib-1.2.31.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/jetbrains/annotations/13.0/annotations-13.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
