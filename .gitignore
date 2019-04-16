@@ -27,9 +27,9 @@ hs_err_pid*
 .idea/dictionaries/
 .idea/encodings.xml
 .idea/kotlinc.xml
-.idea/libraries/
 .idea/misc.xml
 .idea/modules.xml
 .idea/workspace.xml
 grep.iml
 "\321\213.patch"
+out/production/
