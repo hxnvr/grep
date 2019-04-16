@@ -33,3 +33,5 @@ hs_err_pid*
 grep.iml
 "\321\213.patch"
 out/production/
+
+.idea/libraries/
