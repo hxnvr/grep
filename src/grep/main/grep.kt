@@ -10,6 +10,7 @@ class Grep(parser: ArgParser) {
     private val file by parser.positional( "файл для поиска")
 
     fun findStrings(): List<String> {
+        if(i && r) throw IllegalArgumentException("Флаги -r и -i не совместимы")
         val lines = File(file).readLines()
         if (lines.isEmpty()) throw IllegalArgumentException()
         val result = mutableListOf<String>()
