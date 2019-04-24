@@ -20,7 +20,7 @@ class Testtest {
         assertEquals(listOf("sss", "sSs", "ddddd ss", "748jhh", "авпв"), mainTest(arrayOf("-v", "gfdga", "input/test.txt")))
         assertEquals(listOf("gfdga", "ddddd ss", "748jhh", "авпв"), mainTest(arrayOf("-i", "-v", "sSs", "input/test.txt")))
         assertThrows(FileNotFoundException::class.java) { mainTest(arrayOf("sss", "gfd"))}
-        assertThrows(IllegalArgumentException::class.java) { mainTest(arrayOf("sss", "input/test2.txt"))}
+        assertThrows(IllegalArgumentException::class.java) { mainTest(arrayOf("sss", "input/test2"))}
     }
 
 }  

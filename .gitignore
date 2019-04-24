@@ -24,11 +24,8 @@ hs_err_pid*
 
 .idea/codeStyles/
 .idea/dictionaries/
-.idea/encodings.xml
-.idea/kotlinc.xml
-.idea/misc.xml
 .idea/modules.xml
 .idea/workspace.xml
-grep.iml
 out/production/
+
 
