@@ -1,4 +1,4 @@
-package grep.main
+package main
 import java.io.File
 import com.xenomachina.argparser.ArgParser
 

@@ -1,8 +1,8 @@
-package test
+
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
 import com.xenomachina.argparser.ArgParser
-import grep.main.Grep
+import main.Grep
 import java.io.FileNotFoundException
 import java.lang.IllegalArgumentException
 

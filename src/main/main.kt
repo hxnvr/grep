@@ -1,4 +1,4 @@
-package grep.main
+package main
 import com.xenomachina.argparser.ArgParser
 
 fun main(args: Array<String>) {
